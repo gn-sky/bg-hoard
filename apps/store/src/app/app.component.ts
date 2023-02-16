@@ -10,6 +10,7 @@
 // }
 import { Component } from '@angular/core';
 import { getAllGames } from '../fake-api';
+import { formatRating } from '@bg-hoard/store/util-formatters';
 
 @Component({
   selector: 'bg-hoard-root',
@@ -19,4 +20,5 @@ import { getAllGames } from '../fake-api';
 export class AppComponent {
   title = 'Board Game Hoard';
   games = getAllGames();
+  formatRating = formatRating;
 }
